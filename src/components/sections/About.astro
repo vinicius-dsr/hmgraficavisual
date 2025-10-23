@@ -1,5 +1,52 @@
 ---
+import ProductCard from "../ProductCard.astro";
 
+const products = [
+  {
+    title: "Cartão de Visita",
+    src: "",
+  },
+  {
+    title: "Panfletos",
+    src: "",
+  },
+  {
+    title: "Blocos",
+    src: "",
+  },
+  {
+    title: "Cartazes",
+    src: "",
+  },
+  {
+    title: "Lacres e Adesivos",
+    src: "",
+  },
+  {
+    title: "Adesivos em Geral",
+    src: "Wind Banner/Banner",
+  },
+  {
+    title: "Fachadas",
+    src: "",
+  },
+  {
+    title: "Placas",
+    src: "",
+  },
+  {
+    title: "Plotagem",
+    src: "",
+  },
+  {
+    title: "Aplicação de Películas",
+    src: "",
+  },
+  {
+    title: "Criação de Artes Gráficas",
+    src: "",
+  },
+];
 ---
 
 <section class="min-h-[80vh] w-full py-20">
@@ -9,66 +56,11 @@
       <h2 class="text-4xl font-bold text-secondary">Nossos Produtos</h2>
     </div>
     <div class="grid grid-cols-3 gap-6">
-      <div class="max-w-[350px] h-auto">
-        <img
-          class="w-full h-auto bg-primary px-2 py-4"
-          src="/03.png"
-          alt="pruduto"
-        />
-        <p class="bg-secondary py-3 flex justify-center text-white">
-          Título do produto
-        </p>
-      </div>
-      <div class="max-w-[350px] h-auto">
-        <img
-          class="w-full h-auto bg-primary px-2 py-4"
-          src="/03.png"
-          alt="pruduto"
-        />
-        <p class="bg-secondary py-3 flex justify-center text-white">
-          Título do produto
-        </p>
-      </div>
-      <div class="max-w-[350px] h-auto">
-        <img
-          class="w-full h-auto bg-primary px-2 py-4"
-          src="/03.png"
-          alt="pruduto"
-        />
-        <p class="bg-secondary py-3 flex justify-center text-white">
-          Título do produto
-        </p>
-      </div>
-      <div class="max-w-[350px] h-auto">
-        <img
-          class="w-full h-auto bg-primary px-2 py-4"
-          src="/03.png"
-          alt="pruduto"
-        />
-        <p class="bg-secondary py-3 flex justify-center text-white">
-          Título do produto
-        </p>
-      </div>
-      <div class="max-w-[350px] h-auto">
-        <img
-          class="w-full h-auto bg-primary px-2 py-4"
-          src="/03.png"
-          alt="pruduto"
-        />
-        <p class="bg-secondary py-3 flex justify-center text-white">
-          Título do produto
-        </p>
-      </div>
-      <div class="max-w-[350px] h-auto">
-        <img
-          class="w-full h-auto bg-primary px-2 py-4"
-          src="/03.png"
-          alt="pruduto"
-        />
-        <p class="bg-secondary py-3 flex justify-center text-white">
-          Título do produto
-        </p>
-      </div>
+      {
+        products.map((product) => (
+          <ProductCard title={product.title} imageUrl={product.src} />
+        ))
+      }
     </div>
   </div>
 </section>

@@ -12,5 +12,8 @@
     "@tailwindcss/vite": "^4.1.15",
     "astro": "^5.14.8",
     "tailwind": "^4.0.0"
+  },
+  "devDependencies": {
+    "@flaticon/flaticon-uicons": "^3.3.1"
   }
 }

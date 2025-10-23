@@ -3,5 +3,6 @@
 @theme {
   --font-sans: "Inter", "sans-serif";
   --color-primary: #00aff0;
+  --color-black: #221f20;
   --color-secondary: #244153 ;
 }
