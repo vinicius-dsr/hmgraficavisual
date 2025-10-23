@@ -1,5 +1,29 @@
 ---
+import ImpressCard from "../ImpressCard.astro";
 
+const services = [
+  {
+    name: "Wind Banner/Banner",
+  },
+  {
+    name: "Fachadas",
+  },
+  {
+    name: "Placas",
+  },
+  {
+    name: "Lacres e Adesivos",
+  },
+  {
+    name: "Adesivos em Geral",
+  },
+  {
+    name: "Embalagens personalizadas",
+  },
+  {
+    name: "Estiquetas e Tags",
+  },
+];
 ---
 
 <section class="min-h-[80vh] w-full py-20">
@@ -13,36 +37,7 @@
         > formato, para ajudar sua empresa a se destacar no mercado.
       </p>
       <div class="grid grid-cols-3 gap-5 py-6 w-full">
-        <div
-          class="border-3 border-secondary rounded-md py-3 px-8 flex items-center justify-center w-full"
-        >
-          <p class="text-lg font-bold text-secondary">Cartazes A4 e A3</p>
-        </div>
-        <div
-          class="border-3 border-secondary rounded-md py-3 px-8 flex items-center justify-center w-full"
-        >
-          <p class="text-lg font-bold text-secondary">Cartazes A4 e A3</p>
-        </div>
-        <div
-          class="border-3 border-secondary rounded-md py-3 px-8 flex items-center justify-center w-full"
-        >
-          <p class="text-lg font-bold text-secondary">Cartazes A4 e A3</p>
-        </div>
-        <div
-          class="border-3 border-secondary rounded-md py-3 px-8 flex items-center justify-center w-full"
-        >
-          <p class="text-lg font-bold text-secondary">Cartazes A4 e A3</p>
-        </div>
-        <div
-          class="border-3 border-secondary rounded-md py-3 px-8 flex items-center justify-center w-full"
-        >
-          <p class="text-lg font-bold text-secondary">Cartazes A4 e A3</p>
-        </div>
-        <div
-          class="border-3 border-secondary rounded-md py-3 px-8 flex items-center justify-center w-full"
-        >
-          <p class="text-lg font-bold text-secondary">Cartazes A4 e A3</p>
-        </div>
+        {services.map((service) => <ImpressCard service={service.name} />)}
       </div>
     </div>
   </div>
