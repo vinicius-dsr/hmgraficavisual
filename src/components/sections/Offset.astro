@@ -1,5 +1,26 @@
 ---
-import Check from "../icons/Check.astro";
+import ImpressCard from "../ImpressCard.astro";
+
+const services = [
+  {
+    name: "Cartão de Visita",
+  },
+  {
+    name: "Panfletos",
+  },
+  {
+    name: "Blocos",
+  },
+  {
+    name: "Embalagens Personalizadas",
+  },
+  {
+    name: "Cartaz",
+  },
+  {
+    name: "E muito mais",
+  },
+];
 ---
 
 <section class="min-h-[80vh] w-full bg-slate-100 py-20">
@@ -15,37 +36,7 @@ import Check from "../icons/Check.astro";
         >
       </p>
       <div class="grid grid-cols-3 gap-5 py-6 w-full">
-        <div
-          class="border-3 border-secondary rounded-md py-3 px-8 flex items-center gap-2 justify-center w-full"
-        >
-          <Check />
-          <p class="text-lg font-bold text-secondary">Cartazes A4 e A3</p>
-        </div>
-        <div
-          class="border-3 border-secondary rounded-md py-3 px-8 flex items-center justify-center w-full"
-        >
-          <p class="text-lg font-bold text-secondary">Cartazes A4 e A3</p>
-        </div>
-        <div
-          class="border-3 border-secondary rounded-md py-3 px-8 flex items-center justify-center w-full"
-        >
-          <p class="text-lg font-bold text-secondary">Cartazes A4 e A3</p>
-        </div>
-        <div
-          class="border-3 border-secondary rounded-md py-3 px-8 flex items-center justify-center w-full"
-        >
-          <p class="text-lg font-bold text-secondary">Cartazes A4 e A3</p>
-        </div>
-        <div
-          class="border-3 border-secondary rounded-md py-3 px-8 flex items-center justify-center w-full"
-        >
-          <p class="text-lg font-bold text-secondary">Cartazes A4 e A3</p>
-        </div>
-        <div
-          class="border-3 border-secondary rounded-md py-3 px-8 flex items-center justify-center w-full"
-        >
-          <p class="text-lg font-bold text-secondary">Cartazes A4 e A3</p>
-        </div>
+        {services.map((service) => <ImpressCard service={service.name} />)}
       </div>
     </div>
   </div>
