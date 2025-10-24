@@ -1,28 +1,10 @@
 ---
-interface Props {
-  title: string;
-  imageUrl: string;
-  maxWidth?: string;
-  bgColor?: string;
-  titleBgColor?: string;
-}
-
-const {
-  title,
-  imageUrl,
-  maxWidth = "350px",
-  bgColor = "bg-primary",
-  titleBgColor = "bg-black",
-} = Astro.props;
+const { title, imageUrl } = Astro.props;
 ---
 
-<div class={`max-w-[${maxWidth}] h-auto`}>
-  <img
-    class={`w-full h-auto ${bgColor} px-2 py-4`}
-    src={imageUrl}
-    alt={title}
-  />
-  <p class={`${titleBgColor} py-3 flex justify-center text-white`}>
+<div class="bg-primary max-w-[350px]]">
+  <img class="w-full h-auto px-2 py-4" src={imageUrl} alt={title} />
+  <p class="py-3 flex bg-black justify-center text-white">
     {title}
   </p>
 </div>
