@@ -1,20 +1,53 @@
 ---
-
+const feedbacks = [
+  {
+    name: "Marcos Oliveira",
+    role: "Empresário",
+    text: "A HM Solução Gráfica sempre entrega meus materiais com qualidade e rapidez. Recomendo para quem busca profissionalismo!",
+    image: "/icon.png",
+  },
+  {
+    name: "Fernanda Souza",
+    role: "Designer",
+    text: "Os cartões de visita ficaram incríveis! Atendimento personalizado e impressão impecável. Voltarei a fazer novos pedidos.",
+    image: "/icon.png",
+  },
+  {
+    name: "Roberto Lima",
+    role: "Comerciante",
+    text: "Meus banners promocionais chegaram antes do prazo e com ótima qualidade. A gráfica realmente faz a diferença!",
+    image: "/icon.png",
+  },
+];
 ---
 
-<section class="w-full flex items-center py-20">
-  <div class="max-w-5xl mx-auto flex flex-col gap-5 text-center items-center">
-    <h1 class="text-black font-medium text-3xl md:text-4xl">
-      Conheça alguns dos nossos clientes
+<section class="w-full flex items-center py-20 bg-white">
+  <div
+    class="max-w-5xl mx-auto flex flex-col gap-10 text-center items-center px-4"
+  >
+    <h1 class="text-black font-medium semibold text-3xl md:text-4xl">
+      O que nossos clientes dizem
     </h1>
-    <div class="flex flex-col md:flex-row gap-4 items-center py-6">
-      <h2>clientes</h2>
-      <h2>clientes</h2>
-      <h2>clientes</h2>
-      <h2>clientes</h2>
-      <h2>clientes</h2>
-      <h2>clientes</h2>
-      <h2>clientes</h2>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      {
+        feedbacks.map(({ name, role, text, image }) => (
+          <div class="bg-white shadow-md rounded-2xl p-6 text-left border border-gray-100 hover:shadow-lg transition">
+            <div class="flex items-center gap-3 mb-4">
+              <img
+                src={image}
+                alt={name}
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div>
+                <h3 class="font-semibold text-gray-900">{name}</h3>
+                <p class="text-sm text-gray-500">{role}</p>
+              </div>
+            </div>
+            <p class="text-gray-700 leading-relaxed">“{text}”</p>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
