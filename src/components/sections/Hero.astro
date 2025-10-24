@@ -6,9 +6,9 @@
   class="relative bg-primary flex py-10 text-white overflow-hidden pt-12"
 >
   <div
-    class="mx-auto max-w-5xl grid grid-cols-2 gap-12 items-center relative z-10"
+    class="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10"
   >
-    <div class="flex justify-center md:justify-end relative">
+    <div class="md:flex hidden justify-center md:justify-end relative">
       <img
         src="/hm.png"
         class="max-w-[270px] w-full h-auto drop-shadow-2xl md:-translate-y-8 md:-translate-x-8"
@@ -18,22 +18,24 @@
       class="flex flex-col gap-4 text-center text-black md:text-left px-6 md:px-0 pb-20"
     >
       <h1 class="text-5xl font-bold leading-tight">
-        Soluções Gráficas &<br />
-        Comunicação Visual
+        Soluções Gráficas & Comunicação Visual
       </h1>
       <div class="flex flex-col gap-5">
-        <p class="text-lg font-medium text-black/90 max-w-md">
+        <p class="text-lg font-medium text-black/90 md:max-w-md">
           Somos uma empresa especializada no ramo, oferecendo desde cartões de
           visita e materiais impressos até fachadas, placas e plotagem. Conte
           com nossa experiência para dar vida às suas ideias.
         </p>
         <a
           href=""
-          class="px-10 py-3 uppercase text-sm max-w-fit hover:bg-secondary transition-colors bg-black rounded-full text-white font-medium flex items-center justify-center"
+          class="px-10 py-3 uppercase text-sm w-full md:max-w-fit hover:bg-secondary transition-colors bg-black rounded-full text-white font-medium flex items-center justify-center"
           >Solicitar Orçamento</a
         >
       </div>
     </div>
   </div>
-  <div class="absolute bottom-0 left-0 w-full h-[120px] bg-white"></div>
+  <div
+    class="absolute md:block hidden bottom-0 left-0 w-full h-[120px] bg-white"
+  >
+  </div>
 </section>

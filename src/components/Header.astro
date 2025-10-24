@@ -3,13 +3,16 @@ import Whatsapp from "@/components/icons/Whatsapp.astro";
 ---
 
 <header class="w-full py-6 bg-primary">
-  <div class="flex items-center justify-between mx-auto max-w-5xl text-black">
-    <a href="/"><img src="/logo.png" class="w-auto h-16" /></a>
+  <div
+    class="flex items-center justify-between mx-auto max-w-5xl gap-10 px-6 text-black"
+  >
+    <a href="/"><img src="/logo.png" class="w-auto md:h-16 h-12" /></a>
     <a
       href="/about"
-      class="font-bold flex items-center uppercase gap-2 hover:transform hover:scale-105 transition-all"
+      class="font-bold md:text-base text-sm flex items-center uppercase gap-2 hover:transform hover:scale-105 transition-all"
     >
-      <span>Solicitar Orçamento</span>
+      <span class="md:block hidden">Solicitar Orçamento</span>
+      <span class="md:hidden block text-sm">Orçamentos</span>
       <Whatsapp width="19" height="19" />
     </a>
   </div>

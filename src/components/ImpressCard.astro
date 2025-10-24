@@ -1,11 +1,17 @@
 ---
 import Check from "./icons/Check.astro";
-const { service } = Astro.props;
+
+interface Props {
+  service: string;
+  className?: string;
+}
+
+const { service, className = "" } = Astro.props;
 ---
 
 <div
-  class="border-3 border-secondary rounded-md py-3 flex items-center gap-2 justify-center w-full"
+  class={`border-2 md:border-3 border-secondary rounded-md py-2 md:py-3 px-3 md:px-4 flex items-center gap-1.5 md:gap-2 justify-center w-full transition-colors hover:bg-secondary/5 ${className}`}
 >
-  <Check />
-  <p class="text-lg font-bold text-secondary">{service}</p>
+  <Check class="w-4 h-4 md:w-5 md:h-5" />
+  <p class="text-sm md:text-lg font-bold text-secondary">{service}</p>
 </div>

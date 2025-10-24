@@ -23,20 +23,35 @@ const services = [
 ];
 ---
 
-<section class="min-h-[80vh] w-full bg-slate-100 py-20">
-  <div class="mx-auto max-w-5xl flex flex-col gap-4">
+<section
+  class="min-h-screen md:min-h-[80vh] w-full bg-slate-100 py-12 md:py-20"
+>
+  <div class="mx-auto max-w-5xl flex flex-col gap-4 px-4 md:px-6">
     <div class="flex flex-col gap-2 items-center">
-      <h2 class="text-4xl font-medium text-black">Impressão Offset</h2>
-      <div class="mx-auto h-0.5 w-36 bg-primary my-4"></div>
-      <p class="text-black/80 max-w-[50vw] text-center text-lg">
+      <h2 class="text-3xl md:text-4xl font-medium text-black text-center">
+        Impressão Offset
+      </h2>
+      <div class="mx-auto h-0.5 w-24 md:w-36 bg-primary my-3 md:my-4"></div>
+      <p
+        class="text-black/80 max-w-[90%] md:max-w-[50vw] text-center text-base md:text-lg"
+      >
         Oferecemos uma <span class="font-bold">ampla variedade de serviços</span
         > de impressão para ajudar sua empresa a se comunicar de maneira clara e
         eficaz com seus clientes. Se você precisa de grandes tiragens <span
           class="font-bold">temos a solução ideal para você.</span
         >
       </p>
-      <div class="grid grid-cols-3 gap-5 py-6 w-full">
-        {services.map((service) => <ImpressCard service={service.name} />)}
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5 py-4 md:py-6 w-full"
+      >
+        {
+          services.map((service) => (
+            <ImpressCard
+              service={service.name}
+              className="hover:transform hover:scale-[1.02] transition-transform"
+            />
+          ))
+        }
       </div>
     </div>
   </div>
