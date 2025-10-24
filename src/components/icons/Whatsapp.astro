@@ -1,17 +1,15 @@
 ---
-const { id = "", class: className = "" } = Astro.props;
+const { width = "", height = "", fill = "" } = Astro.props;
 ---
 
 <svg
-  id={id}
-  class={className}
-  fill=""
+  fill={fill}
   version="1.1"
   id="Capa_1"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="800px"
-  height="800px"
+  width={width}
+  height={height}
   viewBox="0 0 30.667 30.667"
   xml:space="preserve"
 >
