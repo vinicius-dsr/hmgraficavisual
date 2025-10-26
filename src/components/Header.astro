@@ -7,13 +7,133 @@ import Whatsapp from "@/components/icons/Whatsapp.astro";
     class="flex items-center justify-between mx-auto max-w-5xl gap-10 px-6 text-black"
   >
     <a href="/"><img src="/logo.png" class="w-auto md:h-16 h-12" /></a>
-    <a
-      href="https://wa.me/559191705333"
-      class="font-bold md:text-base text-sm flex items-center uppercase gap-2 hover:transform hover:scale-105 transition-all"
-    >
-      <span class="md:block hidden">Solicitar Orçamento</span>
-      <span class="md:hidden block text-sm">Orçamentos</span>
-      <Whatsapp width="19" height="19" />
-    </a>
+
+    <!-- Desktop navigation -->
+    <nav class="hidden md:flex items-center gap-6">
+      <!-- <a href="#digital" class="uppercase text-sm hover:underline">Digital</a>
+      <a href="#offset" class="uppercase text-sm hover:underline">Offset</a>
+      <a href="#clients" class="uppercase text-sm hover:underline">Clientes</a>
+      <a href="#about" class="uppercase text-sm hover:underline">Sobre</a> -->
+      <a
+        href="https://wa.me/559191705333"
+        class="font-bold md:text-base text-sm flex items-center uppercase gap-2 hover:transform hover:scale-105 transition-all"
+      >
+        Solicitar Orçamento
+        <Whatsapp width="19" height="19" />
+      </a>
+    </nav>
+
+    <!-- Mobile actions: whatsapp icon + hamburger -->
+    <div class="flex items-center gap-3 md:hidden">
+      <!-- <a
+        href="https://wa.me/559191705333"
+        class="font-bold text-sm flex items-center uppercase gap-2 hover:transform hover:scale-105 transition-all"
+      >
+        <Whatsapp width="18" height="18" />
+      </a> -->
+
+      <button
+        id="menu-toggle"
+        aria-expanded="false"
+        aria-label="Abrir menu"
+        class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2"
+      >
+        <!-- hamburger icon -->
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden
+        >
+          <path
+            d="M4 6h16M4 12h16M4 18h16"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </button>
+    </div>
   </div>
+
+  <!-- Mobile menu overlay (hidden by default via translate) -->
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 z-50 bg-white transform translate-y-full transition-transform duration-300 md:hidden"
+  >
+    <div class="flex items-center justify-between p-6 border-b">
+      <a href="/"><img src="/logo.png" class="w-auto h-10" /></a>
+      <button id="menu-close" aria-label="Fechar menu" class="p-2">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden
+        >
+          <path
+            d="M6 6l12 12M6 18L18 6"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="p-6 flex flex-col gap-6 text-lg">
+      <a href="#home" class="uppercase" data-close>Início</a>
+      <a href="#produtos" class="uppercase" data-close>Produtos</a>
+      <a href="#offset" class="uppercase" data-close>Offset</a>
+      <a href="#digital" class="uppercase" data-close>digital</a>
+      <a href="#contato" class="uppercase" data-close>Contato</a>
+      <a href="#clientes" class="uppercase" data-close>Clientes</a>
+
+      <a
+        href="https://wa.me/559191705333"
+        class="mt-4 inline-flex items-center gap-2 uppercase font-bold"
+        data-close
+      >
+        <Whatsapp width="20" height="20" />
+        Solicitar Orçamento
+      </a>
+    </nav>
+  </div>
+
+  <script type="module">
+    const toggle = document.getElementById("menu-toggle");
+    const closeBtn = document.getElementById("menu-close");
+    const menu = document.getElementById("mobile-menu");
+    const closeTargets = menu.querySelectorAll("[data-close]");
+
+    function openMenu() {
+      toggle.setAttribute("aria-expanded", "true");
+      menu.classList.remove("translate-y-full");
+      menu.classList.add("translate-y-0");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeMenu() {
+      toggle.setAttribute("aria-expanded", "false");
+      menu.classList.add("translate-y-full");
+      menu.classList.remove("translate-y-0");
+      document.body.style.overflow = "";
+    }
+
+    toggle.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      if (isOpen) closeMenu();
+      else openMenu();
+    });
+
+    closeBtn.addEventListener("click", closeMenu);
+    closeTargets.forEach((el) => el.addEventListener("click", closeMenu));
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+  </script>
 </header>
