@@ -13,7 +13,7 @@ const { title, imageUrl, maxWidth = "350px", height = "400px" } = Astro.props;
   class="flex flex-col overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 h-full relative bg-primary"
   style={`max-width: ${maxWidth}; height: ${height};`}
 >
-  <div 
+  <div
     class="absolute inset-0 bg-repeat opacity-20"
     style={`
       background-image: url('/icon.png'); 
@@ -21,21 +21,22 @@ const { title, imageUrl, maxWidth = "350px", height = "400px" } = Astro.props;
       -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
       mask-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
     `}
-  ></div>
-  <div class="relative z-10 flex flex-col h-full">
-  <div class="flex-1 flex items-center justify-center p-4 overflow-hidden">
-    <img
-      class="max-w-full max-h-full object-contain drop-shadow-lg"
-      src={imageUrl}
-      alt={title}
-      loading="lazy"
-      style="filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));"
-    />
-  </div>
-  <p
-    class="py-2 md:py-3 flex bg-black justify-center text-white text-sm md:text-base font-medium mt-auto"
   >
-    {title}
+  </div>
+  <div class="relative z-10 flex flex-col h-full">
+    <div class="flex-1 flex items-center justify-center p-4 overflow-hidden">
+      <img
+        class="max-w-full max-h-full object-contain drop-shadow-lg"
+        src={imageUrl}
+        alt={title}
+        loading="lazy"
+        style="filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));"
+      />
+    </div>
+    <p
+      class="py-2 md:py-3 flex bg-black justify-center text-white text-sm md:text-base font-medium mt-auto"
+    >
+      {title}
     </p>
   </div>
 </div>
