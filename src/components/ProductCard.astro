@@ -3,22 +3,27 @@ interface Props {
   title: string;
   imageUrl: string;
   maxWidth?: string;
+  height?: string;
 }
 
-const { title, imageUrl, maxWidth = "350px" } = Astro.props;
+const { title, imageUrl, maxWidth = "350px", height = "400px" } = Astro.props;
 ---
 
 <div
-  class={`bg-primary w-full sm:max-w-[${maxWidth}] rounded-md overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105`}
+  class="flex flex-col bg-primary overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 h-full"
+  style={`max-width: ${maxWidth}; height: ${height};`}
 >
-  <img
-    class="w-full h-auto px-2 py-3 md:py-4"
-    src={imageUrl}
-    alt={title}
-    loading="lazy"
-  />
+  <div class="flex-1 flex items-center justify-center p-4 overflow-hidden">
+    <img
+      class="max-w-full max-h-full object-contain drop-shadow-lg"
+      src={imageUrl}
+      alt={title}
+      loading="lazy"
+      style="filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));"
+    />
+  </div>
   <p
-    class="py-2 md:py-3 flex bg-black justify-center text-white text-sm md:text-base font-medium"
+    class="py-2 md:py-3 flex bg-black justify-center text-white text-sm md:text-base font-medium mt-auto"
   >
     {title}
   </p>
