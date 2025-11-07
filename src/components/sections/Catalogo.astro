@@ -1,0 +1,30 @@
+---
+import Button from "@/components/ui/Button.astro";
+---
+
+<section class="flex mx-auto bg-slate-200 w-full py-20">
+  <div class="flex mx-auto max-w-5xl flex-col gap-4">
+    <div class="flex flex-col items-center gap-5 mb-5">
+      <h2 class="text-2xl font-bold text-blue-600">Catálogo</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vitae
+        corrupti eos voluptas numquam quibusdam consectetur molestias, in
+        necessitatibus, rerum alias cum vero! Quis natus, doloremque blanditiis
+        consequatur modi laudantium.
+      </p>
+    </div>
+    <div class="grid grid-cols-2">
+      <div
+        class="bg-white flex items-center gap-5 px-7 py-10 rounded-md shadow"
+      >
+        <div>
+          <img src="/sacolas.jpg" />
+        </div>
+        <div class="flex flex-col gap-4 items-center min-w-[50%]">
+          <span class="text-lg font-medium">Sacolas</span>
+          <Button variant="primary">Realizar Orçamento</Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
