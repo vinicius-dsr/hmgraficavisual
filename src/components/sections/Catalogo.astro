@@ -3,7 +3,7 @@ import Button from "@/components/ui/Button.astro";
 ---
 
 <section class="flex mx-auto bg-slate-200 w-full py-20">
-  <div class="flex mx-auto max-w-5xl flex-col gap-4">
+  <div class="flex mx-auto max-w-5xl flex-col gap-4 mb-10">
     <div class="flex flex-col items-center gap-5 mb-5">
       <h2 class="text-2xl font-bold text-blue-600">Catálogo</h2>
       <p>
@@ -14,57 +14,19 @@ import Button from "@/components/ui/Button.astro";
       </p>
     </div>
     <div class="grid grid-cols-2 gap-6">
-      <div
-        class="bg-white flex items-center gap-6 px-7 py-10 rounded-xl shadow"
-      >
+      <div class="bg-white flex gap-6 px-7 py-10 rounded-xl shadow">
         <!-- image -->
         <div class="w-full h-auto">
-          <img src="/cartao.avif" />
+          <img src="/cartao.avif" class="w-full h-auto" />
         </div>
         <!-- description and button -->
         <div class="flex flex-col justify-between gap-5 min-w-[50%]">
-          <span class="px-2 text-lg font-medium">Cartões de Visita</span>
-          <Button variant="primary" href="">Realizar Orçamento</Button>
-        </div>
-      </div>
-
-      <div
-        class="bg-white flex items-center gap-6 px-7 py-10 rounded-xl shadow"
-      >
-        <!-- image -->
-        <div class="w-full h-auto">
-          <img src="/cartao.avif" />
-        </div>
-        <!-- description and button -->
-        <div class="flex flex-col justify-between gap-5 min-w-[50%]">
-          <span class="px-2 text-lg font-medium">Cartões de Visita</span>
-          <Button variant="primary" href="">Realizar Orçamento</Button>
-        </div>
-      </div>
-
-      <div
-        class="bg-white flex items-center gap-6 px-7 py-10 rounded-xl shadow"
-      >
-        <!-- image -->
-        <div class="w-full h-auto">
-          <img src="/cartao.avif" />
-        </div>
-        <!-- description and button -->
-        <div class="flex flex-col justify-between gap-5 min-w-[50%]">
-          <span class="px-2 text-lg font-medium">Cartões de Visita</span>
-          <Button variant="primary" href="">Realizar Orçamento</Button>
-        </div>
-      </div>
-      <div
-        class="bg-white flex items-center gap-6 px-7 py-10 rounded-xl shadow"
-      >
-        <!-- image -->
-        <div class="w-full h-auto">
-          <img src="/cartao.avif" />
-        </div>
-        <!-- description and button -->
-        <div class="flex flex-col justify-between gap-5 min-w-[50%]">
-          <span class="px-2 text-lg font-medium">Cartões de Visita</span>
+          <div class="flex flex-col gap-4 px-2">
+            <h2 class="text-xl font-medium">Cartão de Visita</h2>
+            <span class=""
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit</span
+            >
+          </div>
           <Button variant="primary" href="">Realizar Orçamento</Button>
         </div>
       </div>
