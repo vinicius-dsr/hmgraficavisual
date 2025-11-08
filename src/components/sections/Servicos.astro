@@ -1,9 +1,9 @@
 ---
-
+import Button from "@/components/ui/Button.astro";
 ---
 
 <section class="flex mx-auto w-full py-20">
-  <div class="mx-auto max-w-5xl flex flex-col gap-6">
+  <div class="mx-auto max-w-5xl flex flex-col gap-8">
     <!-- Title and description -->
     <div class="flex items-center gap-6">
       <h2 class="text-xl text-blue-600 font-bold">
@@ -19,6 +19,30 @@
       </p>
     </div>
     <!-- cards -->
-    <div></div>
+    <div class="w-full bg-blue-700 p-10 flex gap-7 text-white mt-7 rounded-2xl">
+      <div class="flex flex-col gap-2">
+        <!-- Title -->
+        <h2 class="text-2xl font-medium">Serviço 1</h2>
+        <!-- Description -->
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+          eum! Officia ipsam recusandae vero unde magnam quae alias voluptas,
+          ducimus ipsa repudiandae dolore ex, quasi adipisci quod, distinctio
+          provident sapiente!
+        </p>
+        <!-- Buttons -->
+        <div class="flex gap-2 mt-4 flex-wrap">
+          <Button variant="secondary">Serviços</Button>
+          <Button variant="secondary">Serviços</Button>
+          <Button variant="secondary">Serviços</Button>
+          <Button variant="secondary">Serviços</Button>
+          <Button variant="secondary">Serviços</Button>
+          <Button variant="secondary">Serviços</Button>
+          <Button variant="secondary">Serviços</Button>
+        </div>
+      </div>
+      <!-- Image -->
+      <div></div>
+    </div>
   </div>
 </section>
