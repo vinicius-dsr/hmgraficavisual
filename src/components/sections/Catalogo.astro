@@ -1,5 +1,5 @@
 ---
-import Button from "@/components/ui/Button.astro";
+import CatalogoCard from "@/components/CatalogoCard.astro";
 ---
 
 <section class="flex mx-auto bg-slate-200 w-full py-20">
@@ -14,22 +14,12 @@ import Button from "@/components/ui/Button.astro";
       </p>
     </div>
     <div class="grid grid-cols-2 gap-6">
-      <div class="bg-white flex gap-6 px-7 py-10 rounded-xl shadow">
-        <!-- image -->
-        <div class="w-full h-auto">
-          <img src="/cartao.avif" class="w-full h-auto" />
-        </div>
-        <!-- description and button -->
-        <div class="flex flex-col justify-between gap-5 min-w-[50%]">
-          <div class="flex flex-col gap-4 px-2">
-            <h2 class="text-xl font-medium">Cartão de Visita</h2>
-            <span class=""
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit</span
-            >
-          </div>
-          <Button variant="primary" href="">Realizar Orçamento</Button>
-        </div>
-      </div>
+      <CatalogoCard
+        title="Produto 1"
+        description="Descrição do produto"
+        imageSrc="/cartao.avif"
+        buttonHref="#"
+      />
     </div>
   </div>
 </section>
