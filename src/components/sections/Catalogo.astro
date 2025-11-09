@@ -1,5 +1,6 @@
 ---
 import CatalogoCard from "@/components/CatalogoCard.astro";
+import { catalogoItems } from "@/data/catalogo.ts";
 ---
 
 <section class="flex mx-auto bg-slate-200 w-full py-20">
@@ -14,12 +15,16 @@ import CatalogoCard from "@/components/CatalogoCard.astro";
       </p>
     </div>
     <div class="grid grid-cols-2 gap-6">
-      <CatalogoCard
-        title="Produto 1"
-        description="Descrição do produto"
-        imageSrc="/cartao.avif"
-        buttonHref="#"
-      />
+      {
+        catalogoItems.map((item) => (
+          <CatalogoCard
+            key={item.title}
+            title={item.title}
+            description={item.description}
+            imageSrc={item.imageSrc}
+          />
+        ))
+      }
     </div>
   </div>
 </section>
