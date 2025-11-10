@@ -1,4 +1,5 @@
 ---
+import Whatsapp from "./icons/Whatsapp.astro";
 import Button from "./ui/Button.astro";
 
 const { title, description, imageSrc } = Astro.props;
@@ -18,7 +19,8 @@ const { title, description, imageSrc } = Astro.props;
     <Button
       variant="primary"
       href={`https://wa.me/559191705333?text=Olá, gostaria de solicitar um orçamento para ${title}`}
-      class="text-base">Realizar Orçamento</Button
+      class="text-base w-full px-0"
+      ><Whatsapp class="w-5" /> Realizar Orçamento</Button
     >
   </div>
 </div>
