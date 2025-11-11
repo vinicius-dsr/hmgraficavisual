@@ -1,5 +1,7 @@
 ---
 import Button from "@/components/ui/Button.astro";
+import ServicoCard from "@/components/ServicoCard.astro";
+import { services } from "@/data/servicos.ts";
 ---
 
 <section class="flex mx-auto w-full py-20">
@@ -19,58 +21,14 @@ import Button from "@/components/ui/Button.astro";
       </p>
     </div>
     <!-- cards -->
-    <div
-      class="w-full bg-blue-700 p-10 flex gap-7 text-white rounded-2xl shadow"
-    >
-      <div class="flex flex-col gap-2">
-        <!-- Title -->
-        <h2 class="text-2xl font-medium">Impressão Offset</h2>
-        <!-- Description -->
-        <p>
-          Oferecemos uma ampla variedade de serviços de impressão para ajudar
-          sua empresa a se comunicar de maneira clara e eficaz com seus
-          clientes. Se você precisa de grandes tiragens temos a solução ideal
-          para você.
-        </p>
-        <!-- Buttons -->
-        <div class="flex gap-2 mt-4 flex-wrap">
-          <Button variant="secondary">Cartão de Visita</Button>
-          <Button variant="secondary">Panfletos</Button>
-          <Button variant="secondary">Blocos</Button>
-          <Button variant="secondary">Embalagens Personalizadas</Button>
-          <Button variant="secondary">Cartaz</Button>
-          <Button variant="secondary">E muito mais</Button>
-        </div>
-      </div>
-      <!-- Image -->
-      <div></div>
-    </div>
-
-    <!-- cards -->
-    <div
-      class="w-full bg-blue-700 p-10 flex gap-7 text-white rounded-2xl shadow"
-    >
-      <!-- Image -->
-      <div></div>
-      <div class="flex flex-col gap-2">
-        <!-- Title -->
-        <h2 class="text-2xl font-medium">Impressão Digital</h2>
-        <!-- Description -->
-        <p>
-          Oferecemos serviços de impressão digital de pequeno e grande formato,
-          para ajudar sua empresa a se destacar no mercado.
-        </p>
-        <!-- Buttons -->
-        <div class="flex gap-2 mt-4 flex-wrap">
-          <Button variant="secondary">Wind Banner/Banner</Button>
-          <Button variant="secondary">Fachadas</Button>
-          <Button variant="secondary">Placas</Button>
-          <Button variant="secondary">Lacres e Adesivos</Button>
-          <Button variant="secondary"> Adesivos em Geral </Button>
-          <Button variant="secondary"> Embalagens personalizadas </Button>
-          <Button variant="secondary">Estiquetas e Tags</Button>
-        </div>
-      </div>
-    </div>
+    {
+      services.map((service) => (
+        <ServicoCard
+          title={service.title}
+          description={service.description}
+          services={service.services}
+        />
+      ))
+    }
   </div>
 </section>
