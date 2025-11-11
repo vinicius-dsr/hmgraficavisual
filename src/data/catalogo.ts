@@ -2,63 +2,65 @@ export const catalogoItems = [
   {
     title: "Cartão de Visita",
     description:
-      "Cartão de visita é uma forma de apresentar sua empresa ou marca de forma rápida e eficaz. ",
+      "Cartões personalizados para apresentação profissional da sua marca.",
     imageSrc: "/cartao.avif",
   },
   {
     title: "Panfletos",
     description:
-      "Panfletos são folhetos de papel que podem ser distribuídos para divulgar informações sobre uma empresa ou produto.",
+      "Folhetos promocionais para divulgação de produtos, serviços e eventos.",
     imageSrc: "/panfletos.avif",
   },
   {
     title: "Blocos de Papel",
-    description: "",
+    description: "Blocos personalizados para anotações, orçamentos e pedidos.",
     imageSrc: "/bloco.avif",
   },
   {
     title: "Lacres e Adesivos",
-    description: "",
+    description:
+      "Lacres personalizados para segurança e identidade de embalagens.",
     imageSrc: "/lacre.avif",
   },
   {
     title: "Adesivos em Geral",
-    description: "",
+    description: "Adesivos personalizados em diversos formatos e materiais.",
     imageSrc: "/adesivos.avif",
   },
   {
     title: "Fachadas",
-    description: "",
+    description: "Letreiros e comunicação visual para fachadas comerciais.",
     imageSrc: "/fachada.avif",
   },
   {
     title: "Poster",
-    description: "",
+    description: "Impressão de posters e cartazes para eventos e campanhas.",
     imageSrc: "/poster.avif",
   },
   {
     title: "Tags",
-    description: "",
+    description: "Tags e etiquetas personalizadas para produtos e embalagens.",
     imageSrc: "/tag.avif",
   },
   {
     title: "Placas",
-    description: "",
+    description: "Placas de sinalização em acrílico, PVC e alumínio composto.",
     imageSrc: "/placas.avif",
   },
   {
     title: "Plotagem",
-    description: "",
+    description: "Envelopamento de veículos, vitrines e superfícies diversas.",
     imageSrc: "/plotagem.avif",
   },
   {
     title: "Aplicação de Películas",
-    description: "",
+    description: "Películas decorativas e de proteção solar para vidros.",
     imageSrc: "/pelicula.avif",
   },
   {
     title: "Criação de Artes Gráficas",
-    description: "",
+    description:
+      "Desenvolvimento de artes gráficas personalizadas para sua marca.",
     imageSrc: "/artes.avif",
   },
 ];
